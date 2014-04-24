@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @trade.action_type %>
+</p>
+
+<p>
+  <strong>Valuation:</strong>
+  <%= @trade.valuation %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @trade.amount %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @trade.expiration %>
+</p>
+
+<!-- <p>
+  <strong>Active:</strong>
+  <%= @trade.active %>
+</p> -->
+
+<!-- <p>
+  <strong>Executed:</strong>
+  <%= @trade.executed %>
+</p> -->
+
+<p>
+  <strong>Suspended:</strong>
+  <%= @trade.suspended %>
+</p>
+
+<!-- <p>
+  <strong>User:</strong>
+  <%= @trade.user_id %>
+</p> -->
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>
