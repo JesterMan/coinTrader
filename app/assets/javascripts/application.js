@@ -17,6 +17,9 @@
 //= require backbone_rails_sync
 //= require_tree ./views
 //= require_tree ./models
+//= require_tree ../Templates
+//= require ejs
+
 
 // Rails CSRF Protection
 $(document).ajaxSend(function (e, xhr, options) {
@@ -35,7 +38,7 @@ _.templateSettings = {
 Router = {
   '/signup': function() { new SignupView(); },
   '/login': function() { new LoginView(); },
- 
+  '/trades/new': function() {new SingleTradeView},
  
   route: function (path) {
     _.each(Router, function(callback, route) {
@@ -53,5 +56,7 @@ Router = {
 // Start the app when the page has loaded.
 $(document).ready(function () {
   Router.route(window.location.pathname);
+  new SingleTradeView;
+  new TradeView;
 });
 

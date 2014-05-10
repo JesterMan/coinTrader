@@ -8,6 +8,8 @@ CoinTrader::Application.routes.draw do
   match 'signup' => 'users#new', :via => :get
   match '/'  => 'sessions#default', :via => :get
   match 'place_order'  => 'trades#new', :via => :get
+  match 'index' => 'trades#index', :via => :get
+  
 
   resource :session, :only => [:new, :create, :destroy]
   resource :account, :controller => 'users', :except => [:index, :destroy, :show, :edit]

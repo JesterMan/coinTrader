@@ -1,0 +1,28 @@
+
+<script id="tradeTemplate" type="text/template">
+
+  <div class="cleaner"></div>
+  <div class="templatemo_h_line_2"></div>
+  <div class="field">
+    <ul>
+      <li>Type of trade:
+        <%= action_type %>
+      </li>
+      <li>Execute when Bitcoins are worth:
+        <%= valuation %> 
+      </li>
+      <li>Amount to be traded:
+        <%= amount %>
+      </li>
+      <li>Expires:
+        <%= expiration %> GMT time
+      </li>
+ 
+      <li>   <
+    <%= f.label :suspended %><br> Select to put trade on hold
+    <%= f.check_box :suspended %>
+ 
+    </li>
+   
+    <button class="edit">Edit</button>
+</script>

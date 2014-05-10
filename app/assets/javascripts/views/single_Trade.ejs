@@ -1,17 +1,13 @@
-<%= form_for(@trade) do |f| %>
-  <% if @trade.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@trade.errors.count, "error") %> prohibited this trade from being saved:</h2>
 
-      <ul>
-      <% @trade.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	
 
-  <div class="field">
+
+
+	<h1>New trade</h1>
+	<div class="templatemo_h_line"></div>
+
+
+<div class="field">
     <%= f.label :action_type %>
     <%= f.select :action_type, [['Buy', 'buy'], ['Sell', 'sell']] %>
   </div>
@@ -20,7 +16,7 @@
     <%= f.text_field :valuation %>
   </div>
   <div class="field">
-    <%= f.label :amount %> <br>I would like to trade this amount of dollars:
+    <%= f.label :amount %> <br>I would like to trade this amount of Bitcoins or Dollars:
     <%= f.text_field :amount %>
   </div>
   <div class="field">
@@ -46,4 +42,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

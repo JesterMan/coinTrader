@@ -1,16 +1,21 @@
 class TradesController < ApplicationController
   before_action :set_trade, only: [:show, :edit, :update, :destroy]
 
+  
+
   # GET /trades
   # GET /trades.json
   def index
     @trades = Trade.all
+    render json: @trades
   end
+
 
   # GET /trades/1
   # GET /trades/1.json
   def show
     @trade = Trade.find(params[:id])
+   
   end
 
   # GET /trades/new
@@ -25,7 +30,7 @@ class TradesController < ApplicationController
   # POST /trades
   # POST /trades.json
   def create
-     binding.pry
+    
     @trade = Trade.new(trade_params)
 
     respond_to do |format|
