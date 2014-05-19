@@ -15,9 +15,9 @@
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync
-//= require_tree ./views
 //= require_tree ./models
 //= require_tree ../Templates
+//= require_tree ./views
 //= require ejs
 
 

@@ -1,6 +1,4 @@
-var sTVTemplate = _.template('single trade here'),
-	localTemplate = JST["trade_template"];
-debugger
+var localTemplate = JST.edit_template;
 
 
 
@@ -18,6 +16,14 @@ SingleTradeView = Backbone.View.extend( {
 
 	newTrade: function(){},
 	edit: function(){},
+	
+	render: function(info) {
+		
+		
+	 	
+	 	this.$el.html(localTemplate({model: info.toJSON()[0]}));
+	 	
+	},
 
 	initialize: function() {
 	    this.collection = new TradeHistory();
@@ -28,11 +34,7 @@ SingleTradeView = Backbone.View.extend( {
 
 
 
-	render: function() {
-	 	
-	 	this.$el.html(sTVTemplate());
-	 	
-	},
+	
 
 
 	

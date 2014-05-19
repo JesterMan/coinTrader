@@ -1,31 +1,29 @@
 
-<script id="tradeTemplate" type="text/template">
 
   <div class="cleaner"></div>
   <div class="templatemo_h_line_2"></div>
   <div class="field">
     <ul>
       <li>Type of trade:
-        <%= action_type %>
+        <%= model.action_type %>
       </li>
       <li>Execute when Bitcoins are worth:
-        <%= valuation %> 
+        <%= model.valuation %> 
       </li>
       <li>Amount to be traded:
-        <%= amount %>
+        <%= model.amount %>
       </li>
       <li>Expires:
-        <%= expiration %> GMT time
+        <%= model.expiration %> GMT time
       </li>
-    <% if (executed){ %>
+    <% if (model.executed){ %>
       <li> Executed on:
-        <%= executed %>
+        <%= model.executed %>
       </li>
     <% } %>
-    <% if (suspended){ %>
+    <% if (model.suspended){ %>
     <li>
       Currently suspended
     </li>
     <% } %>
     <button class="edit">Edit</button>
-</script>
