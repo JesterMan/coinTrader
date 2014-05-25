@@ -1,0 +1,41 @@
+
+
+<button id="new">New Trade</button>
+
+  <div class="cleaner"></div>
+  <div class="templatemo_h_line_2"></div>
+  <div class="bigfield">
+    <form >
+     <div class="field">
+    <label for="trade_action_type">Action type</label>
+    <select id="trade_action_type" name="trade[action_type]">
+    <option value="buy"
+    <% if (model.action_type == "buy"){ %>
+      selected 
+      <% }; %>
+      >Buy</option>
+<option value="sell"
+  <% if (model.action_type == "sell"){ %>
+      selected
+    <% }; %>
+    >Sell</option></select>
+  </div>
+      
+<div class="field">
+    <label for="trade_valuation">Valuation</label> <br>Execute when Bitcoins are worth:
+    <input id="trade_valuation" name="trade[valuation]" type="text" value="
+    <%= model.valuation %>
+    "/>
+  </div>
+<div class="field">
+    <label for="trade_amount">Amount</label> <br>I would like to trade this amount of dollars:
+    <input id="trade_amount" name="trade[amount]" type="text" value="
+    <%= model.amount %>
+    "/>
+  </div>
+  <div class="field">
+    <label for="trade_suspended">Suspended</label><br> Select to put trade on hold
+    <input name="trade[suspended]" type="hidden" value="0" /><input id="trade_suspended" name="trade[suspended]" type="checkbox" value="1" />
+  </div>
+        
+    <button id="save">Save</button><button id="delete">Delete</button>

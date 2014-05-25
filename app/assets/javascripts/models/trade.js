@@ -5,13 +5,18 @@ var Trade = Backbone.Model.extend({
  		amount:'0',
  		expiration: '',
   		executed: false,
-    	suspended: false,
-  		user_id: ''
+    	suspended: false
+    },
+  
+
+    url: function (){
+        
+        return '/trades/' + this.attributes.id;
     }
 });
 
 var TradeHistory = Backbone.Collection.extend({
 	model: Trade,
-	url: '/trades'
+	url: '/trades/'
 });
 

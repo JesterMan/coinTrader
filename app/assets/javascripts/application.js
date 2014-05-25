@@ -56,7 +56,9 @@ Router = {
 // Start the app when the page has loaded.
 $(document).ready(function () {
   Router.route(window.location.pathname);
-  new SingleTradeView;
-  new TradeView;
+  Trades = new TradeHistory;
+  new SingleTradeView({collection: Trades});
+  new TradesView({collection: Trades});
+  Trades.fetch();
 });
 
