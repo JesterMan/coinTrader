@@ -34,6 +34,7 @@ SingleTradeView = Backbone.View.extend( {
 			});
 
 			debugger;
+		
 			newOne.save(null,{
 				success: function () {
 		            alert('success');

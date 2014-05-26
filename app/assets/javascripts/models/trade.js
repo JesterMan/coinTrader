@@ -10,8 +10,12 @@ var Trade = Backbone.Model.extend({
   
 
     url: function (){
-        
-        return '/trades/' + this.attributes.id;
+        if (this.get('id') ){
+            return '/trades/' + this.attributes.id;
+        }
+        else{
+            return '/trades'
+        }
     }
 });
 
