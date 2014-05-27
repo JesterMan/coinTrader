@@ -14,13 +14,13 @@ var Trade = Backbone.Model.extend({
             return '/trades/' + this.attributes.id;
         }
         else{
-            return '/trades'
-        }
-    }
+          return '/trades/'
+       }
+     }
 });
 
 var TradeHistory = Backbone.Collection.extend({
 	model: Trade,
-	url: '/trades/'
+	url: '/trades'
 });
 

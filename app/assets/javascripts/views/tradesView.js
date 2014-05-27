@@ -7,7 +7,9 @@ TradesView = Backbone.View.extend({
     initialize: function() {
         this.collection.on("reset", this.render, this);
         this.collection.on("add", this.renderOne, this);
+
     },
+    currentEditing: null,
 
     render: function() {
         this.$el.html('');

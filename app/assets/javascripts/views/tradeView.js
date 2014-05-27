@@ -6,7 +6,13 @@ TradeView = Backbone.View.extend({
 
     
     edit: function(){
-        new EditTradeView({model: this.model});
+      debugger
+      if (window.currentEditing) {
+        window.currentEditing.remove();
+      }
+        $('#templatemo_right_section').append('<div id="singleTrade"></div>');
+        window.currentEditing = new EditTradeView({model: this.model});
+
     },
 
     render: function(){

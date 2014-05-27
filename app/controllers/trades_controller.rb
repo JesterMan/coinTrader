@@ -35,10 +35,10 @@ class TradesController < ApplicationController
 
     respond_to do |format|
       if @trade.save
-        # format.html { redirect_to @trade, notice: 'Trade was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @trade }
+        format.html { redirect_to @trade, notice: 'Trade was successfully created.' }
+        format.json { render action: 'show', status: :ok, location: @trade }
       else
-        # format.html { render action: 'new' }
+        format.html { render action: 'new' }
         format.json { render json: @trade.errors, status: :unprocessable_entity }
       end
     end

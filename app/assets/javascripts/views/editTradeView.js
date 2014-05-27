@@ -18,10 +18,15 @@ EditTradeView = Backbone.View.extend({
 		new SingleTradeView;
 	},
 
+
+
 	delete: function(evt){
+		debugger
 		evt.preventDefault();
 		console.log('ok');
 		this.model.destroy();
+		new SingleTradeView;
+	
 	},
 
 	update: function(evt) {
@@ -55,7 +60,7 @@ EditTradeView = Backbone.View.extend({
 	
 
 	initialize: function(passed) {
-		
+		debugger;
 		this.render(passed);
 
 	},

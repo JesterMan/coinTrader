@@ -14,7 +14,9 @@ SingleTradeView = Backbone.View.extend( {
 	
 	
 
-	newTrade: function(){
+	newTrade: function(evt){
+		evt.preventDefault();
+
 	
 		
 		// this.collection.add(thisnewmodel)
@@ -34,9 +36,10 @@ SingleTradeView = Backbone.View.extend( {
 			});
 
 			debugger;
-		
+
 			newOne.save(null,{
 				success: function () {
+					debugger
 		            alert('success');
 		        },
 		        error: function () {
