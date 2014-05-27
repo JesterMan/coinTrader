@@ -21,11 +21,14 @@ EditTradeView = Backbone.View.extend({
 
 
 	delete: function(evt){
-		debugger
+		
 		evt.preventDefault();
 		console.log('ok');
 		this.model.destroy();
+		window.happy.remove();
 		new SingleTradeView;
+		debugger
+
 	
 	},
 

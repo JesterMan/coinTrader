@@ -41,11 +41,14 @@ SingleTradeView = Backbone.View.extend( {
 				success: function () {
 					debugger
 		            alert('success');
+		            
+		            new SingleTradeView;
 		        },
 		        error: function () {
 		        	debugger
 		            alert('error');
 		        }
+
         	});
 			
 
